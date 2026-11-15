@@ -1,0 +1,28 @@
+name: Validate skills
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check required files
+        shell: bash
+        run: |
+          test -f skills/ai-coding-toolkit-setup/SKILL.md
+          test -f skills/ai-coding-toolkit-setup/references/tools.md
+          test -f skills/ai-coding-toolkit-setup/scripts/detect-environment.mjs
+          grep -q '^name: ai-coding-toolkit-setup$' skills/ai-coding-toolkit-setup/SKILL.md
+      - name: Check detector syntax
+        run: node --check skills/ai-coding-toolkit-setup/scripts/detect-environment.mjs
+      - name: Run read-only detector
+        run: node skills/ai-coding-toolkit-setup/scripts/detect-environment.mjs
