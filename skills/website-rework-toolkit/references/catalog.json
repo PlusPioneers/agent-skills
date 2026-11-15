@@ -47,8 +47,8 @@
     {
       "name": "ai-coding-toolkit-setup",
       "selector": "ai-coding-toolkit-setup",
-      "source": "PlusPioneers/zenith-agent-skills",
-      "ref": "v1.1.0",
+      "source": "PlusPioneers/agent-skills",
+      "ref": "v1.1.1",
       "category": "tooling",
       "license": "MIT"
     },

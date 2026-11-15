@@ -25,7 +25,7 @@ Bootstraps the complete skill stack used for the Zenith website work. It provide
 Install globally for Claude Code, Codex, and Kiro:
 
 ```bash
-npx skills add PlusPioneers/zenith-agent-skills \
+npx skills add PlusPioneers/agent-skills \
   --skill ai-coding-toolkit-setup \
   --agent claude-code \
   --agent codex \
@@ -39,7 +39,7 @@ Remove `--global` to install only in the current workspace.
 Kiro can also import the skill-folder URL directly from **Agent Steering & Skills → Import a skill → GitHub**:
 
 ```text
-https://github.com/PlusPioneers/zenith-agent-skills/tree/main/skills/ai-coding-toolkit-setup
+https://github.com/PlusPioneers/agent-skills/tree/main/skills/ai-coding-toolkit-setup
 ```
 
 Restart the agent session after installation so the skill is discovered.
@@ -49,7 +49,7 @@ Restart the agent session after installation so the skill is discovered.
 Install the catalog skill globally:
 
 ```bash
-npx skills add PlusPioneers/zenith-agent-skills@v1.1.0 \
+npx skills add PlusPioneers/agent-skills@v1.1.1 \
   --skill website-rework-toolkit \
   --agent claude-code \
   --agent codex \

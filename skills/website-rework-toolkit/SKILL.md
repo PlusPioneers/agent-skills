@@ -4,7 +4,7 @@ description: Set up or audit the portable design, copywriting, content strategy,
 license: MIT
 metadata:
   author: PlusPioneers
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Website rework toolkit
