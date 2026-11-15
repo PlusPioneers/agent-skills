@@ -1,6 +1,6 @@
 # Zenith Agent Skills
 
-Portable Agent Skills for Claude Code, Codex, and Kiro.
+Portable Agent Skills and a source-pinned website-rework catalog for Claude Code, Codex, and Kiro.
 
 ## Included skill
 
@@ -15,6 +15,10 @@ Safely assesses, installs, configures, updates, and removes:
 - NVIDIA SkillSpector
 
 The skill distinguishes native integrations from CLI and MCP adapters, checks prerequisites, protects credentials, and requires approval before external installations or configuration changes.
+
+### `website-rework-toolkit`
+
+Bootstraps the complete skill stack used for the Zenith website work. It provides design, content, architecture, SEO, security, browser testing, and UAT profiles while installing third-party skills from their original repositories at reviewed commits.
 
 ## Install
 
@@ -40,6 +44,24 @@ https://github.com/PlusPioneers/zenith-agent-skills/tree/main/skills/ai-coding-t
 
 Restart the agent session after installation so the skill is discovered.
 
+## Install the catalog
+
+Install the catalog skill globally:
+
+```bash
+npx skills add PlusPioneers/zenith-agent-skills@v1.1.0 \
+  --skill website-rework-toolkit \
+  --agent claude-code \
+  --agent codex \
+  --agent kiro-cli \
+  --global \
+  --yes
+```
+
+Then ask the agent to set up the `full`, `design`, `content`, or `quality` website-rework profile. The skill shows the pinned source plan and requests approval before running external installers.
+
+The catalog references third-party projects at their original repositories instead of republishing them. See [`catalog.json`](skills/website-rework-toolkit/references/catalog.json) and [`THIRD_PARTY.md`](THIRD_PARTY.md).
+
 ## Use
 
 Ask the agent to set up, compare, audit, update, or remove the five-tool AI coding toolkit. You can also invoke `ai-coding-toolkit-setup` explicitly from clients that expose skills as commands.
@@ -50,12 +72,18 @@ The skill does not install all five tools automatically. It first checks the env
 
 ```text
 skills/
-└── ai-coding-toolkit-setup/
+├── ai-coding-toolkit-setup/
+│   ├── SKILL.md
+│   ├── references/
+│   │   └── tools.md
+│   └── scripts/
+│       └── detect-environment.mjs
+└── website-rework-toolkit/
     ├── SKILL.md
     ├── references/
-    │   └── tools.md
+    │   └── catalog.json
     └── scripts/
-        └── detect-environment.mjs
+        └── catalog.mjs
 ```
 
 ## Security

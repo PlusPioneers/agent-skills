@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-16",
+  "supportedAgents": ["claude-code", "codex", "kiro-cli"],
+  "profiles": {
+    "design": [
+      "design-taste-frontend",
+      "frontend-design",
+      "image-to-code",
+      "web-design-guidelines",
+      "playwright-cli"
+    ],
+    "content": [
+      "product-marketing",
+      "copywriting",
+      "copy-editing",
+      "content-strategy",
+      "site-architecture",
+      "seo-audit",
+      "ai-seo"
+    ],
+    "quality": [
+      "owasp-security",
+      "playwright-cli",
+      "web-design-guidelines",
+      "webapp-uat"
+    ],
+    "full": [
+      "ai-coding-toolkit-setup",
+      "design-taste-frontend",
+      "frontend-design",
+      "image-to-code",
+      "web-design-guidelines",
+      "playwright-cli",
+      "webapp-uat",
+      "owasp-security",
+      "product-marketing",
+      "copywriting",
+      "copy-editing",
+      "content-strategy",
+      "site-architecture",
+      "seo-audit",
+      "ai-seo"
+    ]
+  },
+  "skills": [
+    {
+      "name": "ai-coding-toolkit-setup",
+      "selector": "ai-coding-toolkit-setup",
+      "source": "PlusPioneers/zenith-agent-skills",
+      "ref": "v1.1.0",
+      "category": "tooling",
+      "license": "MIT"
+    },
+    {
+      "name": "ai-seo",
+      "selector": "ai-seo",
+      "source": "coreyhaines31/marketingskills",
+      "ref": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "category": "content",
+      "license": "MIT"
+    },
+    {
+      "name": "content-strategy",
+      "selector": "content-strategy",
+      "source": "coreyhaines31/marketingskills",
+      "ref": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "category": "content",
+      "license": "MIT"
+    },
+    {
+      "name": "copy-editing",
+      "selector": "copy-editing",
+      "source": "coreyhaines31/marketingskills",
+      "ref": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "category": "content",
+      "license": "MIT"
+    },
+    {
+      "name": "copywriting",
+      "selector": "copywriting",
+      "source": "coreyhaines31/marketingskills",
+      "ref": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "category": "content",
+      "license": "MIT"
+    },
+    {
+      "name": "design-taste-frontend",
+      "selector": "taste-skill",
+      "source": "Leonxlnx/taste-skill",
+      "ref": "f6b76575f949707b4e3c37cd86cb44b0b98643e8",
+      "category": "design",
+      "license": "MIT"
+    },
+    {
+      "name": "frontend-design",
+      "selector": "frontend-design",
+      "source": "anthropics/skills",
+      "ref": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+      "category": "design",
+      "license": "upstream"
+    },
+    {
+      "name": "image-to-code",
+      "selector": "image-to-code",
+      "source": "Leonxlnx/imagegen-skills",
+      "ref": "beb16b0d0f4dae9a6f5cb04ea41e97b93a54ab8e",
+      "category": "design",
+      "license": "MIT"
+    },
+    {
+      "name": "owasp-security",
+      "selector": "owasp-security",
+      "source": "agamm/claude-code-owasp",
+      "ref": "1ae29cb22518560e3625d77f2ae64f61647d9201",
+      "category": "quality",
+      "license": "MIT"
+    },
+    {
+      "name": "playwright-cli",
+      "selector": "playwright-cli",
+      "source": "microsoft/playwright-cli",
+      "ref": "b21724888b8100b05ef8dee3a92f2bb03bf4dcde",
+      "category": "quality",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "product-marketing",
+      "selector": "product-marketing",
+      "source": "coreyhaines31/marketingskills",
+      "ref": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "category": "content",
+      "license": "MIT"
+    },
+    {
+      "name": "seo-audit",
+      "selector": "seo-audit",
+      "source": "coreyhaines31/marketingskills",
+      "ref": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "category": "content",
+      "license": "MIT"
+    },
+    {
+      "name": "site-architecture",
+      "selector": "site-architecture",
+      "source": "coreyhaines31/marketingskills",
+      "ref": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "category": "content",
+      "license": "MIT"
+    },
+    {
+      "name": "web-design-guidelines",
+      "selector": "web-design-guidelines",
+      "source": "vercel-labs/agent-skills",
+      "ref": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "category": "quality",
+      "license": "upstream"
+    },
+    {
+      "name": "webapp-uat",
+      "selector": "webapp-uat",
+      "source": "tsilverberg/webapp-uat",
+      "ref": "bbf65777adb1fc5708d316045cd3db62635a8c7a",
+      "category": "quality",
+      "license": "upstream"
+    }
+  ],
+  "references": [
+    {
+      "name": "awesome-design-md",
+      "source": "VoltAgent/awesome-design-md",
+      "ref": "fcc70284932276d085f01ef9f83edde90b1258cb",
+      "url": "https://github.com/VoltAgent/awesome-design-md",
+      "installable": false,
+      "license": "MIT"
+    }
+  ]
+}

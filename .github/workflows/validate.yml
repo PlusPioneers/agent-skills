@@ -21,8 +21,17 @@ jobs:
           test -f skills/ai-coding-toolkit-setup/SKILL.md
           test -f skills/ai-coding-toolkit-setup/references/tools.md
           test -f skills/ai-coding-toolkit-setup/scripts/detect-environment.mjs
+          test -f skills/website-rework-toolkit/SKILL.md
+          test -f skills/website-rework-toolkit/references/catalog.json
+          test -f skills/website-rework-toolkit/scripts/catalog.mjs
           grep -q '^name: ai-coding-toolkit-setup$' skills/ai-coding-toolkit-setup/SKILL.md
+          grep -q '^name: website-rework-toolkit$' skills/website-rework-toolkit/SKILL.md
       - name: Check detector syntax
         run: node --check skills/ai-coding-toolkit-setup/scripts/detect-environment.mjs
       - name: Run read-only detector
         run: node skills/ai-coding-toolkit-setup/scripts/detect-environment.mjs
+      - name: Validate catalog
+        run: |
+          node --check skills/website-rework-toolkit/scripts/catalog.mjs
+          node skills/website-rework-toolkit/scripts/catalog.mjs list --profile full
+          node skills/website-rework-toolkit/scripts/catalog.mjs plan --profile quality --agents claude-code,codex,kiro-cli --global
